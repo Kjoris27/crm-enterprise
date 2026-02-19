@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "action-card",
+  "type": "registry:component",
+  "title": "Action Card",
+  "description": "An action card component.",
+  "registryDependencies": [
+    "card"
+  ],
+  "files": [
+    {
+      "path": "src/components/content/action-card.tsx",
+      "content": "import {\r\n  CardContent,\r\n  Card,\r\n  CardDescription,\r\n  CardFooter,\r\n  CardHeader,\r\n  CardTitle,\r\n} from \"@/components/ui/card\";\r\nimport { cn } from \"@/lib/utils\";\r\n\r\nexport function ActionCard({\r\n  children,\r\n  className,\r\n  ...props\r\n}: React.ComponentProps<\"div\">) {\r\n  return (\r\n    <Card\r\n      className={cn(\"group/action-card shadow-none py-4 gap-4\", className)}\r\n      {...props}\r\n    >\r\n      {children}\r\n    </Card>\r\n  );\r\n}\r\n\r\nexport function ActionCardHeader({\r\n  children,\r\n  className,\r\n  ...props\r\n}: React.ComponentProps<\"div\">) {\r\n  return (\r\n    <CardHeader className={cn(\"px-4 [.border-b]:pb-4\", className)} {...props}>\r\n      {children}\r\n    </CardHeader>\r\n  );\r\n}\r\n\r\nexport function ActionCardGroup({\r\n  children,\r\n  className,\r\n  ...props\r\n}: React.ComponentProps<\"div\">) {\r\n  return (\r\n    <div className={cn(\"grid gap-4\", className)} {...props}>\r\n      {children}\r\n    </div>\r\n  );\r\n}\r\n\r\nexport function ActionCardTitle({\r\n  children,\r\n  ...props\r\n}: React.ComponentProps<\"div\">) {\r\n  return <CardTitle {...props}>{children}</CardTitle>;\r\n}\r\n\r\nexport function ActionCardDescription({\r\n  children,\r\n  ...props\r\n}: React.ComponentProps<\"div\">) {\r\n  return <CardDescription {...props}>{children}</CardDescription>;\r\n}\r\n\r\nexport function ActionCardContent({\r\n  children,\r\n  className,\r\n  ...props\r\n}: React.ComponentProps<\"div\">) {\r\n  return (\r\n    <CardContent className={cn(\"px-4\", className)} {...props}>\r\n      {children}\r\n    </CardContent>\r\n  );\r\n}\r\n\r\nexport function ActionCardFooter({\r\n  children,\r\n  className,\r\n  ...props\r\n}: React.ComponentProps<\"div\">) {\r\n  return (\r\n    <CardFooter className={cn(\"px-4 [.border-t]:pt-4\", className)} {...props}>\r\n      {children}\r\n    </CardFooter>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ]
+}

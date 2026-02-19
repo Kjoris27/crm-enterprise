@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "empty-state",
+  "type": "registry:component",
+  "title": "Empty state",
+  "description": "A empty state component.",
+  "files": [
+    {
+      "path": "src/components/content/empty-state.tsx",
+      "content": "import { cn } from \"@/lib/utils\";\r\n\r\nexport function EmptyStateContainer({\r\n  children,\r\n  className,\r\n  ...props\r\n}: React.ComponentProps<\"div\">) {\r\n  return (\r\n    <div\r\n      className={cn(\r\n        \"flex flex-col items-center justify-center h-full border border-border border-dashed rounded-lg p-4 gap-2\",\r\n        className\r\n      )}\r\n      {...props}\r\n    >\r\n      {children}\r\n    </div>\r\n  );\r\n}\r\n\r\nexport function EmptyStateTitle({\r\n  children,\r\n  className,\r\n  ...props\r\n}: React.ComponentProps<\"p\">) {\r\n  return (\r\n    <p className={cn(\"text-foreground\", className)} {...props}>\r\n      {children}\r\n    </p>\r\n  );\r\n}\r\n\r\nexport function EmptyStateDescription({\r\n  children,\r\n  className,\r\n  ...props\r\n}: React.ComponentProps<\"p\">) {\r\n  return (\r\n    <p\r\n      className={cn(\"text-sm text-muted-foreground text-center\", className)}\r\n      {...props}\r\n    >\r\n      {children}\r\n    </p>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ]
+}

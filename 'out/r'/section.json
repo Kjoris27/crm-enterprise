@@ -1,0 +1,14 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "section",
+  "type": "registry:component",
+  "title": "Section",
+  "description": "A Section component.",
+  "files": [
+    {
+      "path": "src/components/content/section.tsx",
+      "content": "import { cn } from \"@/lib/utils\";\r\n\r\nexport function Section({\r\n  children,\r\n  className,\r\n  ...props\r\n}: React.ComponentProps<\"section\">) {\r\n  return (\r\n    <section className={cn(\"space-y-4\", className)} {...props}>\r\n      {children}\r\n    </section>\r\n  );\r\n}\r\n\r\nexport function SectionHeader({\r\n  children,\r\n  className,\r\n  ...props\r\n}: React.ComponentProps<\"div\">) {\r\n  return (\r\n    <div className={cn(\"flex flex-col gap-1.5\", className)} {...props}>\r\n      {children}\r\n    </div>\r\n  );\r\n}\r\n\r\nexport function SectionHeaderRow({\r\n  children,\r\n  className,\r\n  ...props\r\n}: React.ComponentProps<\"div\">) {\r\n  return (\r\n    <div\r\n      className={cn(\r\n        \"flex flex-col sm:flex-row gap-1.5 sm:items-end sm:justify-between\",\r\n        className\r\n      )}\r\n      {...props}\r\n    >\r\n      {children}\r\n    </div>\r\n  );\r\n}\r\n\r\nexport function SectionDescription({\r\n  children,\r\n  className,\r\n  ...props\r\n}: React.ComponentProps<\"p\">) {\r\n  return (\r\n    <p className={cn(\"text-sm text-muted-foreground\", className)} {...props}>\r\n      {children}\r\n    </p>\r\n  );\r\n}\r\n\r\nexport function SectionTitle({\r\n  children,\r\n  className,\r\n  ...props\r\n}: React.ComponentProps<\"p\">) {\r\n  return (\r\n    <p className={cn(\"text-lg font-medium\", className)} {...props}>\r\n      {children}\r\n    </p>\r\n  );\r\n}\r\n\r\nexport function SectionGroup({\r\n  children,\r\n  className,\r\n  ...props\r\n}: React.ComponentProps<\"div\">) {\r\n  return (\r\n    <div\r\n      className={cn(\"px-4 py-8 space-y-8 w-full max-w-4xl mx-auto\", className)}\r\n      {...props}\r\n    >\r\n      {children}\r\n    </div>\r\n  );\r\n}\r\n\r\nexport function SectionGroupHeader({\r\n  children,\r\n  className,\r\n  ...props\r\n}: React.ComponentProps<\"div\">) {\r\n  return (\r\n    <div className={cn(\"space-y-1.5\", className)} {...props}>\r\n      {children}\r\n    </div>\r\n  );\r\n}\r\n\r\nexport function SectionGroupTitle({\r\n  children,\r\n  className,\r\n  ...props\r\n}: React.ComponentProps<\"p\">) {\r\n  return (\r\n    <p className={cn(\"text-4xl font-bold\", className)} {...props}>\r\n      {children}\r\n    </p>\r\n  );\r\n}\r\n",
+      "type": "registry:component"
+    }
+  ]
+}
